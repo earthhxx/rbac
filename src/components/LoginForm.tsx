@@ -19,7 +19,7 @@ export default function LoginForm({ onLoginSuccess }: Props) {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/Login", {
+      const res = await fetch("/api/auth/Login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
