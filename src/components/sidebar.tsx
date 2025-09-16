@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link"; // ✅ ใช้ Link
+import Link from "next/link";
 import { useAuth } from "@/app/context/AuthContext";
 
 export default function Sidebar() {
@@ -55,24 +55,6 @@ export default function Sidebar() {
                     }`}
             >
                 <div className="relative w-full h-full flex flex-col justify-center items-center">
-                    {/* {!user && (
-            <div className="absolute inset-0 flex flex-col justify-center items-center">
-              <div className="relative mb-6 w-[150px] h-[150px]">
-                <div className="absolute flex justify-center items-center pb-4 inset-0 rounded-full bg-white opacity-80 shadow-2xl animate-spin-coin-reverse preserve-3d">
-                  <Image
-                    src="/images/LOGO3.png"
-                    alt="Watermark"
-                    width={110}
-                    height={110}
-                    style={{ objectFit: "contain", backfaceVisibility: "hidden" }}
-                    priority
-                  />
-                </div>
-              </div>
-
-              <LoginForm onLoginSuccess={(loggedUser) => login(loggedUser)} />
-            </div>
-          )} */}
 
                     {user && (
                         <>
