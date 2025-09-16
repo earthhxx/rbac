@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     const userResult = await pool.request()
       .input('username', sql.Int, username)
       .query(`
-        SELECT [User_Id],[Name],[Pass],[ForgetPass]
+        SELECT [User_Id],[Name],[Pass]
         FROM tb_im_employee
         WHERE User_Id = @username
       `);
@@ -36,7 +36,6 @@ export async function POST(req: NextRequest) {
     }
 
     const userrow = userResult.recordset[0];
-    const ForgetPass = userrow.ForgetPass
 
     const isBcryptHash = (str: string) => typeof str === 'string' && str.startsWith('$2');
     let isValid = false;
