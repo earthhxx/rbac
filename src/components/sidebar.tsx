@@ -74,7 +74,7 @@ export default function Sidebar() {
 
                                 {roles?.includes("Admin") && (
                                     <Link
-                                        href="/pages/admin"
+                                        href="/admin"
                                         onClick={() => setOpen(false)}
                                         className="hover:bg-green-700 bg-green-700/30 p-3 rounded font-medium text-green-400 text-center"
                                     >
