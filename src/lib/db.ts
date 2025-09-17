@@ -27,7 +27,7 @@ export const getsqlserverConnection = async () => {
     },
   }).connect();
 
-  // console.log('✅ Connected to NewFCXT DB');
+  console.log('✅ Connected to NewFCXT DB');
   return pool_NewFCXT;
 };
 
